@@ -822,7 +822,7 @@ header #header-bar #navbar .navbar-content a:hover {
   height: 1px;
   background-color: #000;
 }
-#quote label, #quote .label {
+#quote label {
   text-transform: uppercase;
   font-size: 14px;
   margin-bottom: 5px;
@@ -1087,4 +1087,4 @@ header #header-bar #navbar .navbar-content a:hover {
   font-weight: bold;
   font-size: 16px;
 }
-/*# sourceMappingURL=main.5f32e2d7.css.map */
+/*# sourceMappingURL=main.ae21f171.css.map */
