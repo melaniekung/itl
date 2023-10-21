@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Irving Tire Ltd.</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="assets/css/main.765c497f.css" rel="stylesheet">
+  </head>
+  <header id="header">
+    <div id="header-bar">
+      <div id="logo"><a href="/"><img src="logo.png" alt="Irving Tire Ltd."></a></div>
+      <div id="navbar">
+        <div class="navbar-content"><a href="/">Home</a><a href="tires.html">Tire Services</a><a
+            href="mech.html">Mechanical Services</a><a href="contact.html">Contact Us</a></div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div id="tire-services-div">
+      <div class="tire-services-cont">
+        <div class="ts ts-services">
+          <h2>Our Tire Services</h2>
+          <p>We operate on a large range of vehicle types and tires. Check out our services here.</p>
+        </div>
+        <div class="ts-img ts new-tire">
+          <h4>New Tire Installation</h4>
+        </div>
+        <div class="ts-img ts run-flat">
+          <h4>Run-Flat Tires Installation</h4>
+        </div>
+        <div class="ts-img ts seasonal">
+          <h4>Seasonal Tires</h4>
+        </div>
+        <div class="ts-img ts mount">
+          <h4>Ready To Mount Tires And Rims</h4>
+        </div>
+        <div class="ts-img ts flat">
+          <h4>Flat Tire Repairs</h4>
+        </div>
+      </div>
+    </div>
+    <div id="view-mech-services">
+      <h2>Not What You're Looking For?</h2><button><a href="mech.html">View Mechanical Services</a></button>
+    </div>
+    <div id="quote">
+      <div class="quote-title-div">
+        <h2>Get a Quote</h2>
+      </div>
+      <form action="https://formspree.io/f/mgerpybn" method="POST">
+        <div class="form-group"><label for="name">Your Name *</label><input type="text"></div>
+        <div class="form-group"><label for="email">Your Email *</label><input type="email"></div>
+        <div class="form-group"><label for="phone">Your Phone Number *</label><input type="text"></div>
+        <div class="form-group"><label for="tiretype">What type of tire are you looking for?</label><select
+            id="tiretype" name="dropdown">
+            <option value="all-seasons">All Seasons</option>
+            <option value="winter">Winter</option>
+            <option value="all-weather">All Weather</option>
+          </select></div>
+        <div class="form-group-info"><label for="vehicleinfo">Vehicle Information</label><br><input type="number"
+            size="4" name="Vehicle Year" min="1950" max="2050" placeholder="Vehicle Year"><input type="text"
+            placeholder="Vehicle Make"><input type="text" placeholder="Vehicle Model"><input type="text"
+            placeholder="Tire Size (IE. P225/70R16 915)"></div>
+        <div class="quote-text">
+          <p>For services other than new tire installation, run-flat tires installation, seasonal tire changes, swap
+            mounted tires &amp; rims or flat tire repairs, please contact us at <span
+              class="bold underline">604-255-8494</span><span>.</span></p>
+        </div>
+        <div class="btn-div"><input class="btn-submit" type="submit" value="Submit Form"></div>
+      </form>
+    </div>
+  </body>
+  <footer>
+    <div id="footer-container">
+      <div id="icon-img"><a href="/"><img src="favicon.png" alt="Irving Tire Ltd."></a></div>
+      <div id="add-cont">
+        <div id="title">Irving Tire Ltd.</div>
+        <div id="address">1285 William St, Vancouver, BC, V6A 2J3</div>
+      </div>
+      <div id="icons-cont"><a href="contact.html"><img src="icons8-mail-500.png" alt=""><img src="icons8-phone-500.png"
+            alt=""></a></div>
+    </div>
+  </footer>
+</html>
