@@ -46,19 +46,20 @@
         <h2>Get a Quote</h2>
       </div>
       <form action="https://formspree.io/f/mgerpybn" method="POST">
-        <div class="form-group"><label for="name">Your Name *</label><input type="text"></div>
-        <div class="form-group"><label for="email">Your Email *</label><input type="email"></div>
-        <div class="form-group"><label for="phone">Your Phone Number *</label><input type="text"></div>
+        <div class="form-group"><label for="contactname">Your Name *</label><input type="text" name="contactname"></div>
+        <div class="form-group"><label for="contactemail">Your Email *</label><input type="email" name="contactemail">
+        </div>
+        <div class="form-group"><label for="phone">Your Phone Number *</label><input type="text" name="phone"></div>
         <div class="form-group"><label for="tiretype">What type of tire are you looking for?</label><select
-            id="tiretype" name="dropdown">
+            id="tiretype" name="tiretype">
             <option value="all-seasons">All Seasons</option>
             <option value="winter">Winter</option>
             <option value="all-weather">All Weather</option>
           </select></div>
-        <div class="form-group-info"><label for="vehicleinfo">Vehicle Information</label><br><input type="number"
-            size="4" name="Vehicle Year" min="1950" max="2050" placeholder="Vehicle Year"><input type="text"
-            placeholder="Vehicle Make"><input type="text" placeholder="Vehicle Model"><input type="text"
-            placeholder="Tire Size (IE. P225/70R16 915)"></div>
+        <div class="form-group-info"><label>Vehicle Information</label><br><input type="number" size="4"
+            name="vehicleyear" min="1950" max="2050" placeholder="Vehicle Year"><input type="text" name="vehiclemake"
+            placeholder="Vehicle Make"><input type="text" name="vehiclemodel" placeholder="Vehicle Model"><input
+            type="text" name="tiresize" placeholder="Tire Size (IE. P225/70R16 915)"></div>
         <div class="quote-text">
           <p>For services other than new tire installation, run-flat tires installation, seasonal tire changes, swap
             mounted tires &amp; rims or flat tire repairs, please contact us at <span
