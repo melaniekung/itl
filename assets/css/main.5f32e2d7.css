@@ -822,11 +822,15 @@ header #header-bar #navbar .navbar-content a:hover {
   height: 1px;
   background-color: #000;
 }
-#quote label {
+#quote label, #quote .label {
   text-transform: uppercase;
   font-size: 14px;
   margin-bottom: 5px;
   font-weight: bold;
+}
+#quote .veh-info {
+  display: flex;
+  justify-content: space-between;
 }
 #quote input[type=text],
 #quote input[type=email],
@@ -1083,4 +1087,4 @@ header #header-bar #navbar .navbar-content a:hover {
   font-weight: bold;
   font-size: 16px;
 }
-/*# sourceMappingURL=main.765c497f.css.map */
+/*# sourceMappingURL=main.5f32e2d7.css.map */
