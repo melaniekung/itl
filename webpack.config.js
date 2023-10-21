@@ -1,12 +1,13 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BundleAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const PugPlugin = require('pug-plugin')
 
 module.exports = {
   mode: 'development',
   entry: {
-    bundle: path.resolve(__dirname, 'src/index.js'),
+    index: './src/views/index.pug',
+    contact: './src/views/contact.pug',
+    mech: './src/views/mech.pug',
+    tires: './src/views/tires.pug',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -28,8 +29,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.(css|sass|scss)$/,
+        use: ['css-loader', 'sass-loader'],
       },
       {
         test: /\.js$/,
@@ -45,14 +46,35 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.pug$/,
+        loader: PugPlugin.loader
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext][query]'
+        }
+      }
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Webpack App',
-      filename: 'index.html',
-      template: 'src/template.html',
+    new PugPlugin({
+      pretty: true,
+      js: {
+        filename: 'assets/js/[name].[contenthash:8].js',
+      },
+      css: {
+        filename: 'assets/css/[name].[contenthash:8].css',
+      },
     }),
-    new BundleAnalyzerPlugin(),
   ],
+  resolve: {
+    alias: {
+      Images: path.join(__dirname, './src/assets/images/'),
+      Fonts: path.join(__dirname, './src/assets/fonts/'),
+      Views: path.join(__dirname, 'src/views/')
+    }
+  }
 }

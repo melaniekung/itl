@@ -1,0 +1,57 @@
+extends layout
+
+block content
+    #tire-services-div
+        .tire-services-cont
+            .ts.ts-services
+                h2= "Our Tire Services"
+                p= "We operate on a large range of vehicle types and tires. Check out our services here."
+            .ts-img.ts.new-tire
+                h4= "New Tire Installation"
+            .ts-img.ts.run-flat
+                h4= "Run-Flat Tires Installation"
+            .ts-img.ts.seasonal
+                h4= "Seasonal Tires"
+            .ts-img.ts.mount
+                h4= "Ready To Mount Tires And Rims"
+            .ts-img.ts.flat
+                h4= "Flat Tire Repairs"
+
+    #view-mech-services
+        h2= "Not What You're Looking For?"
+        button
+            a(href="mech.html") View Mechanical Services
+
+    #quote
+        .quote-title-div
+            h2= "Get a Quote"
+        form(action="https://formspree.io/f/mgerpybn" method="POST")
+            .form-group
+                label(for="contactname")= "Your Name *"
+                input(type="text" id="contactname" name="contactname")
+            .form-group
+                label(for="contactemail")= "Your Email *"
+                input(type="email" id="contactemail" name="contactemail")
+            .form-group
+                label(for="phone")= "Your Phone Number *"
+                input(type="text" id="phone" name="phone" autocomplete="off")
+            .form-group
+                label(for="tiretype")= "What type of tire are you looking for?"
+                select#tiretype(name="tiretype")
+                    option(value="all-seasons")= "All Seasons"
+                    option(value="winter")= "Winter"
+                    option(value="all-weather")= "All Weather"
+            .form-group-info
+                label= "Vehicle Information"
+                    div.veh-info
+                        input(type="number" size="4" name="vehicleyear" min="1950" max="2050" placeholder="Vehicle Year")
+                        input(type="text" name="vehiclemake" placeholder="Vehicle Make")
+                        input(type="text"  name="vehiclemodel" placeholder="Vehicle Model")
+                        input(type="text" name="tiresize" placeholder="Tire Size (IE. P225/70R16 915)")
+            .quote-text
+                p= "For services other than new tire installation, run-flat tires installation, seasonal tire changes, swap mounted tires & rims or flat tire repairs, please contact us at "
+                    span.bold.underline= "604-255-8494"
+                    span= "."
+            .btn-div
+                input.btn-submit(type="submit" value="Submit Form")
+

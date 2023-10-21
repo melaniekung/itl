@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    #background-div
+    #contact-div
+        .contact-cont
+            h2.contact-heading= "We'd Love to Hear From You."
+            .info-cont
+                .contact-info
+                    .cont-add
+                        img(src=require('Images/icons/icons8-address-100.png'), alt="Address: 1285 William St.")
+                        span.bold= "Address: "
+                        span= "1285 William St."
+                    .cont-phone
+                        img(src=require('Images/icons/icons8-phone-100.png'), alt="Phone: 604-255-8494")
+                        span.bold= "Phone: "
+                        span= "(604) 255 8494"
+                    .cont-email
+                        img(src=require('Images/icons/icons8-envelope-100.png'), alt="Email: irvingtire@shaw.ca")
+                        span.bold= "Email: "
+                        span= "irvingtire@shaw.ca"
+                    .cont-hours
+                        img(src=require('Images/icons/icons8-clock-100.png'), alt="Hours: Mon-Fri: 8-5 Sat: 8-4 Sun: CLOSED")
+                        span.bold= "Store Hours"
+                        .hours
+                            span.bold= "Mon - Fri: "
+                            span= "8:00 AM - 5:00 PM"
+                            br
+                            span.bold= "Sat: "
+                            span= "8:00 AM - 4:00 PM"
+                            br
+                            span.bold= "Sun: "
+                            span= "CLOSED"
+                    .cont-inq
+                        span= "Have an inquiry on tires? Fill out a "
+                        a(href="tires.html#quote").underline.italic.bold= "form"
+                        span= "."
+                .map
+                    a(href="https://www.google.com/maps/place/Irving+Tire+Ltd./@49.2741584,-123.0776242,21z/data=!4m5!3m4!1s0x54867141551c43ef:0xe2c5294a3d14f3e8!8m2!3d49.2741459!4d-123.0774915")
+                        img(src=require('Images/location.png'), alt="")
+    .padding-block-150
+
+    script(src='/javascripts/contact-bg.js')

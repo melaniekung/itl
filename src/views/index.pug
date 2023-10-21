@@ -1,0 +1,88 @@
+extends layout
+
+block content
+  #top-banner
+    #banner-info
+      .blue-header= "For all your auto repair and tire needs."
+      span.text-primary= "Here at Irving Tire Ltd., we proudly serve the local Vancouver, BC area. We understand that getting your car fixed or buying new tires can be overwhelming and that\'s where we come in! We are committed to being your number one choice for any auto repair."
+      .banner-btns
+        button#learn-more.btn-primary Learn More
+        button.btn-primary
+          a(href="contact.html") Contact Us
+    #banner-img
+      img(src=require('Images/homepage/car_banner.png'), alt="")
+
+  #logos-bar
+    .logos-container
+      img(src=require('Images/brand_logos/goodyear.png'), alt="Good Year")
+      img(src=require('Images/brand_logos/kumho.png'), alt="Kumho")
+      img(src=require('Images/brand_logos/pirelli.png'), alt="Pirelli")
+      img(src=require('Images/brand_logos/michelin.png'), alt="Michelin")
+      img(src=require('Images/brand_logos/continental.png'), alt="Continental")
+
+  .bg-grad
+    #why-us
+      div
+        img(src=require('Images/homepage/why_choose_us.png'), alt="")
+      .why-us
+        .black-header= "Why Choose Us?"
+        span.text-primary= "Thank you for checking us out! You\'ve come to the right place if you\'re looking for a friendly, honest automotive technician to answer all your questions and promptly service your vehicle. At Irving Tire Ltd. we have the experience to help you with all your auto repair and tire needs. If you\'re still not convinced that we provide the tires and auto repair services you\'re looking for, then call us or come see us, and see how our friendly staff will go above and beyond to help you with your auto repair needs."
+
+  .padding-block-822
+
+  .services-container
+    #services
+      .left
+        #expect.bg-white
+          .blk-header= "What To Expect"
+          .text-primary= "Once you park your car, come on in to our office. We\'ll get your contact information and listen to your mechanical needs. Drop off your keys and wheel lock if you require one. We will take care of the rest!"
+      .right
+        .top
+          .quote.bg-white
+            a(href="tires.html#quote")
+              .blk-header= "Get A Quote"
+              .text-primary= "If you are looking for new tires, click here. All we need is some information about your car and tire size. We\'ll contact you with some options! For other services, contact us here."
+        .bottom
+          #tire-service.bg-white
+            a(href="tires.html")
+              .blk-header= "Tire Services"
+          #mech-service.bg-white
+            a(href="mech.html")
+              .blk-header= "Mechanical Services"
+
+  #do-today
+    .black-header= "What can we do for you today?"
+    .text-primary= "We provide a variet of different services. Take a look at what we can help you with."
+    .do-today-container-main
+      #tire-install.do-today-container
+        span= "Tire Installation & Repair"
+      #brakes.do-today-container
+        span= "Brake Repairs"
+      #prevent.do-today-container
+        span= "Preventative Maintenance"
+
+  .view-all
+    a(href="mech.html")
+      button= "View All"
+
+  #faq
+    .faq-container
+      .faq-left
+        img(src=require('Images/homepage/faq.svg'), alt="")
+      .faq-right
+        .white-header= "Got A Question?"
+        .questions-container
+          button.banner= "Where is our entrance located?"
+          div.hidden
+            p= "You can find our driveway and entrance on the northwest corner of Clark Drive & William Street."
+          button.banner= "Where can I find the tire size?"
+          div.hidden
+            p= "You can find your tire size in a couple spots on the vehicle. Check your tire or the sticker on your door or door jam."
+          button.banner= "What do the numbers on the tire size mean?"
+          div.hidden
+            p= "For example, 225/45 R17. 225 indicates width of the tire. 45 calculates the thickness of sidewall. 17 indicates the diameter of the rim."
+          button.banner= "What are the differences between All-Season Tires and All-Weather tires?"
+          div.hidden
+            p= "Both are great for wet and dry conditions. However, All-Weather tires are also rated for cold and snowy conditions like winter tires."
+  script(src=require('../javascripts/learnmore.js'))
+  script(src=require('../javascripts/banner.js'))

@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title= "Irving Tire Ltd."
+    link(rel='icon' type='image/png' href=require('Images/branding/favicon.png'))
+    link(href=require('../styles/main.scss') rel='stylesheet')
+
+  header#header
+    #header-bar
+      #logo
+        a(href="/")
+          img(src=require('Images/branding/logo.png'), alt="Irving Tire Ltd.")
+      #navbar
+        .navbar-content
+          a(href="/")= "Home"
+          a(href="tires.html")= "Tire Services"
+          a(href="mech.html")= "Mechanical Services"
+          a(href="contact.html")= "Contact Us"
+
+  body
+    block content
+
+  footer
+    #footer-container
+      #icon-img
+        a(href="/")
+          img(src=require('Images/branding/favicon.png'), alt="Irving Tire Ltd.")
+      #add-cont
+        #title= "Irving Tire Ltd."
+        #address= "1285 William St, Vancouver, BC, V6A 2J3"
+      #icons-cont
+        a(href="contact.html")
+          img(src=require('Images/icons/icons8-mail-500.png'), alt="")
+          img(src=require('Images/icons/icons8-phone-500.png'), alt="")
