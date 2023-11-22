@@ -4,6 +4,7 @@ html
     title= "Irving Tire Ltd."
     link(rel='icon' type='image/png' href=require('Images/branding/favicon.png'))
     link(href=require('../styles/main.scss') rel='stylesheet')
+    script(src="https://kit.fontawesome.com/c64f366b0a.js" crossorigin="anonymous")
 
   header#header
     #header-bar
@@ -26,8 +27,9 @@ html
         a(href="/")
           img(src=require('Images/branding/favicon.png'), alt="Irving Tire Ltd.")
       #add-cont
-        #title= "Irving Tire Ltd."
-        #address= "1285 William St, Vancouver, BC, V6A 2J3"
+        a(href="contact.html")
+          #title= "Irving Tire Ltd."
+          #address= "1285 William St, Vancouver, BC, V6A 2J3"
       #icons-cont
         a(href="contact.html")
           img(src=require('Images/icons/icons8-mail-500.png'), alt="")

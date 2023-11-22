@@ -161,12 +161,16 @@ header {
     margin-top: 1rem;
     margin: 1.5rem;
 
+    #learn-more {
+      cursor: pointer;
+    }
+
     @media (min-width: 992px) and (max-width: 1200px) {
       margin-top: 3rem;
     }
   }
 
-    #banner-img {
+  #banner-img {
     width: 50%;
     display: flex;
     align-items: center;
@@ -227,6 +231,7 @@ header {
 
 #logos-bar {
   display: flex;
+  flex: 1 1 auto;
   background-color: #00195c;
   justify-content: space-between;
   align-items: center;
@@ -369,6 +374,15 @@ header {
   margin-left: 5rem;
   margin-right: 5rem;
 
+  .left, .right {
+    display: flex;
+
+    .bg-white {
+      // display: flex;
+      flex: 1 1 auto;
+    }
+  }
+
   @media (max-width: 992px) {
     height: 500px;
     .quote {
@@ -458,10 +472,6 @@ header {
       padding-bottom: 3rem;
     }
 
-    @media (min-width: 2000px) {
-      background-size: 50%;
-    }
-
     .text-primary {
       width: 80%;
       font-size: 18px;
@@ -469,7 +479,6 @@ header {
   }
 
   .quote {
-    padding-bottom: 3rem;
     background-image: url(Images/homepage/get_a_quote.png);
     background-repeat: no-repeat;
     background-size: 45%;
@@ -483,10 +492,6 @@ header {
 
     @media (max-width: 1300px) {
       padding-bottom: 5rem;
-    }
-
-    @media (min-width: 2000px) {
-      background-size: 30%;
     }
 
     .text-primary {
@@ -503,43 +508,26 @@ header {
     background-image: url(Images/homepage/tire_services.png);
     background-size: 75%;
     background-repeat: no-repeat;
-    background-position: 130px -10px;
+    background-position: 65px -5px;
     width: 50%;
-    @media (min-width: 2000px) {
-      background-size: 50%;
-      background-position: 250px;
-    }
-
-    @media (max-width: 1300px) {
-      background-position: 100px 0;
-    }
-
-    @media (max-width: 992px) {
-      background-position: 70px 0;
-    }
   }
 
   #mech-service {
     background-image: url(Images/homepage/mechanical_services.png);
     background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: 100px 0px;
+    background-size: 70%;
+    background-position: 50px 5px;
     width: 50%;
     height: 245px;
-
-    @media (min-width: 2000px) {
-      background-size: 50%;
-      background-position: 200px;
-    }
-
-    @media (max-width: 1200px) {
-        background-position: 80px 10px;
-    }
   }
 }
 
 #do-today {
   margin-top: 5rem;
+
+  a {
+    text-decoration: none;
+  }
 
   .black-header {
     display: flex;
@@ -552,7 +540,7 @@ header {
     justify-content: center;
   }
 
-  .do-today-container-main {
+  .do-today-container-main a {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -569,6 +557,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
+
     span {
       color: #fff;
       font-size: 25px;
@@ -623,6 +612,7 @@ header {
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
+    cursor: pointer;
   }
 }
 
@@ -658,6 +648,7 @@ header {
 
   .questions-container .banner {
     background-color: #fff;
+    display: flex;
     border-radius: 5px;
     padding: 0.5rem;
     font-size: 23px;
@@ -665,6 +656,8 @@ header {
     margin: 0.5rem 0 0 0;
     width: 90%;
     text-align: start;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     border: none;
     outline: none;
@@ -689,7 +682,9 @@ header {
 }
 
 .banner:after {
-  content: '\2304';
+  // content: '\2304';
+  content: '\f107'; // accordion arrow
+  font-family: FontAwesome;
   color: #777;
   float: right;
 }
@@ -708,11 +703,13 @@ header {
     width: 50px;
   }
 
-  #add-cont {
+  #add-cont a {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
 
     #title {
       font-size: 20px;
@@ -974,7 +971,7 @@ header {
     color: #00195c;
     width: 300px;
     height: auto;
-    padding: 0 5rem 5rem 5rem;
+    padding: 0 2rem 5rem 2rem;
   }
 
   .info-cont {
@@ -991,6 +988,9 @@ header {
 
   .contact-info {
     padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
 
     div {
       margin: 1rem 0
@@ -1005,18 +1005,20 @@ header {
       padding-right: 1rem;
     }
   }
+}
 
-  .cont-inq {
-    padding-top: 1rem;
-    .italic {
-      color: #00195c;
-    }
+.cont-inq {
+  padding-top: 1rem;
+  min-width: 350px !important;
+  
+  .italic {
+    color: #00195c;
   }
 }
 
-.padding-block-150 {
+.padding-block-250 {
   display: block;
-  padding-top: 150px;
+  padding-top: 250px;
 }
 
 #mech-div {
